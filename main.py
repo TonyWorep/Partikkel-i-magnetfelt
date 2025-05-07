@@ -1,3 +1,4 @@
+from matplotlib import pyplot as plt
 def main():
     B = [0, 0, 1e-3]
     p = [0, 0, 0]
@@ -5,8 +6,8 @@ def main():
     q = 1.67e-19
     m = 9.11e-31
 
-    N = 100
-    T = 0.00048
+    N = int(1000)
+    T = 0.0000001
     dt = T/N
 
     x = []
@@ -44,9 +45,14 @@ def main():
         y.append(p[1])
         z.append(p[2])
     
-    print(x)
-    print(y)
-    print(z)
+    #print(x)
+    #print()
+    #print(y)
+    #print()
+    #print(z)
+    plt.plot(x, y)
+    plt.show()
+
 
 
 if __name__ == "__main__":
