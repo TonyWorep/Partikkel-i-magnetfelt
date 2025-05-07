@@ -1,3 +1,5 @@
+from math import e
+
 def kraft(v1, v2, q, m):
     x = v1[1] * v2[2] - v1[2] * v2[1]
     y = -(v1[0] * v2[2] - v1[2] * v2[0])
@@ -15,6 +17,9 @@ def pos(v, p, dt):
     py = p[1] + v[1]*dt
     pz = p[2] + v[2]*dt
     return [px, py, pz]
+
+def magnetfelt(p):
+    return (1e-3)/e**(p[1]*2000)
 
 def main():
     print("Wrong here bud.")
