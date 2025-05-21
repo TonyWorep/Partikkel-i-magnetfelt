@@ -19,8 +19,11 @@ def pos(v: list, p: list, dt: float) -> list:
     pz = p[2] + v[2]*dt
     return [px, py, pz]
 
-def magnetfelt(p: list) -> float:
-    return (1e-3)/e**(p[1]*2000)
+def magnetfelt(p: list, drift: bool) -> float:
+    if drift:
+        return (1e-3)/e**(p[1]*2000)
+    else:
+        return 1e-3
 
 def main():
     print("Wrong here bud.")

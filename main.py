@@ -20,7 +20,7 @@ def main():
 
 
     for i in range (N):
-        B[2] = magnetfelt(p)
+        B[2] = magnetfelt(p, True)
         a = kraft(v, B, q, m)
         v = fart(a, v, dt)
         p = pos(v, p, dt)
