@@ -1,6 +1,6 @@
 from matplotlib import pyplot as plt
 
-from calculations import fart, kraft, pos, magnetfelt
+from calculations import fart, kraft, magnetfelt, pos
 
 
 def main():
