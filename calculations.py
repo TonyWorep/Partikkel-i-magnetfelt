@@ -1,7 +1,7 @@
 from math import e
 
 
-def kraft(v1: list, v2: list, q: float, m: float) -> list:
+def akselerasjon(v1: list, v2: list, q: float, m: float) -> list:
     x = v1[1] * v2[2] - v1[2] * v2[1]
     y = -(v1[0] * v2[2] - v1[2] * v2[0])
     z = v1[0] * v2[1] - v1[1] * v2[0]

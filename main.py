@@ -1,6 +1,6 @@
 from matplotlib import pyplot as plt
 
-from calculations import fart, kraft, magnetfelt, pos
+from calculations import akselerasjon, fart, magnetfelt, pos
 
 
 def main():
@@ -20,8 +20,8 @@ def main():
 
 
     for i in range (N):
-        B[2] = magnetfelt(p, True)
-        a = kraft(v, B, q, m)
+        B[2] = magnetfelt(p)
+        a = akselerasjon(v, B, q, m)
         v = fart(a, v, dt)
         p = pos(v, p, dt)
 
