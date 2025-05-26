@@ -1,11 +1,11 @@
 from math import e
 
 
-def akselerasjon(v1: list, v2: list, q: float, m: float) -> list:
+def akselerasjon(v1: list, v2: list, q: float, m: float, E: list) -> list:
     x = v1[1] * v2[2] - v1[2] * v2[1]
     y = -(v1[0] * v2[2] - v1[2] * v2[0])
     z = v1[0] * v2[1] - v1[1] * v2[0]
-    return [(q*x)/m, (q*y)/m, (q*z)/m]
+    return [(q*x + q*E[0])/m, (q*y + q*E[1])/m, (q*z + q*E[2])/m]
 
 def fart(a: list, v: list, dt: float) -> list:
     vx = v[0] + a[0]*dt

@@ -9,9 +9,10 @@ def main():
     v = [0, 3.58e4, 0]
     q = 1.67e-19
     m = 9.11e-31
+    E = [-35.8, 0, 0]
 
     N = 10000
-    T = 0.0000001
+    T = 0.000000034
     dt = T/N
 
     x = []
@@ -20,8 +21,10 @@ def main():
 
 
     for i in range (N):
-        B[2] = magnetfelt(p)
-        a = akselerasjon(v, B, q, m)
+        if p[1] >= 0.0002:
+            E = [0,0,0]
+        B[2] = magnetfelt(p, False)
+        a = akselerasjon(v, B, q, m, E)
         v = fart(a, v, dt)
         p = pos(v, p, dt)
 
